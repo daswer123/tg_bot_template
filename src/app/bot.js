@@ -3,6 +3,7 @@ import { config } from "dotenv";
 import { setBotCommands, registerBotCommands } from "./commands.js";
 import { registerBotActions } from "./actions.js";
 import { createUserTables } from "../backend/db/db_users.js";
+import { escapeMarkdown } from "../utils/funcs.js";
 
 
 const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN);
